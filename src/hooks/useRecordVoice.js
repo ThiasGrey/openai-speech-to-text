@@ -48,7 +48,7 @@ export const useRecordVoice = () => {
     const mediaRecorder = new MediaRecorder(stream);
 
     mediaRecorder.onstart = () => {
-      
+      createMediaStream(stream);
       chunks.current = [];
     };
 
